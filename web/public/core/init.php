@@ -1,6 +1,8 @@
 <?php 
 //Start Session
-session_start();
+session_start([
+    'cookie_secure' => true, 'cookie_lifetime' => 86400, 'cookie_samesite' => 'Strict', 'cookie_httponly' => true
+]);
 
 if (empty($_SESSION['token'])) 
     {
