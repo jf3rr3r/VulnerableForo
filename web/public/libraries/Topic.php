@@ -45,9 +45,8 @@ class Topic {
     
     //Get Category details
     public function getCategory($category_id){
-        //$this->db->query('select * from categories where id = :category_id');
-	$this->db->query("select * from categories where id = '" .$category_id . "'");
-        //$this->db->bind(':category_id',$category_id);
+        $this->db->query('select * from categories where id = :category_id');
+        $this->db->bind(':category_id',$category_id);
         
         //Assign result
         $result = $this->db->single();
