@@ -1,6 +1,7 @@
 <?php include('includes/header.php'); ?>
 
 <form role="form" enctype="multipart/form-data" method="post" action="register.php">
+    <input name="csrf" type="hidden" value="<?php echo $_SESSION['csrf']; ?>">
     <div class="form-group">
         <label>Name*</label><input type="text" class="form-control" name="name" placeholder="Enter your Name" />
     </div>

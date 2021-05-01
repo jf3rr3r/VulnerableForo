@@ -13,10 +13,12 @@
                             </div>
                             <br />
                             <form role="form" method="post" action="logout.php">
+                                <input name="csrf_logout" type="hidden" value="<?php echo $_SESSION['token']; ?>">
                                 <input type="submit" name="do_logout" class="btn btn-default" value="Log Out" />
                             </form>
                         <?php else : ?>
                             <form role="form" method="post" action="login.php">
+                            <input name="csrf" type="hidden" value="<?php echo $_SESSION['token']; ?>">
                                 <div class="form-group">
                                     <label>Username</label>
                                     <input name="username" type="text" class="form-control" placeholder="Introduce el Username" />
