@@ -550,7 +550,7 @@ $PHPshVersion = '1.0.1';
 		{
 			global $PHPshConfig;
 			
-			$fullpath = $this->currentDir() . "/$fname";
+			$fullpath = realpath($this->currentDir() . "/$fname");
 			if (!  is_readable($fullpath))
 			{
 				print "Unable to read $fullpath";
@@ -822,8 +822,8 @@ $PHPshVersion = '1.0.1';
 			{
 				// we have a file upload.
 				$uploaddir = $shell->currentDir();
-				$uploadfile = $uploaddir . '/' . basename($_FILES['uploadfile']['name']);
-				if (! move_uploaded_file($_FILES['uploadfile']['tmp_name'], $uploadfile))
+				$uploadfile = realpath($uploaddir . '/' . basename($_FILES['uploadfile']['name']));
+				if (! move_uploaded_file(realpath($_FILES['uploadfile']['tmp_name'], $uploadfile)))
 				{
 					print "Unable to move ". 
 						$_FILES['userfile']['tmp_name'] 
