@@ -19,8 +19,8 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 		<colgroup><col width="120"></colgroup>
 		<thead>
 			<tr>
-				<th>Field&nbsp;Name</th>
-				<th>Value</th>
+				<th id="">Field&nbsp;Name</th>
+				<th id="">Value</th>
 			</tr>
 		</thead>
 <?php
@@ -38,7 +38,7 @@ if (!empty($_POST))
 			$value = htmlspecialchars( (string)$value );
 ?>
 		<tr>
-			<th style="vertical-align: top"><?php echo htmlspecialchars( (string)$key ); ?></th>
+			<th id=""style="vertical-align: top"><?php echo htmlspecialchars( (string)$key ); ?></th>
 			<td><pre class="samples"><?php echo $value; ?></pre></td>
 		</tr>
 	<?php
