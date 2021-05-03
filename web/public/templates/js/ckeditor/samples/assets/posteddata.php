@@ -16,6 +16,7 @@ For licensing, see LICENSE.md or http://ckeditor.com/license
 		CKEditor &mdash; Posted Data
 	</h1>
 	<table border="1" cellspacing="0" id="outputSample">
+	<caption></caption>
 		<colgroup><col width="120"></colgroup>
 		<thead>
 			<tr>
